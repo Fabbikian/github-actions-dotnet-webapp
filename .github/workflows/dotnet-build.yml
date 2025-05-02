@@ -1,0 +1,27 @@
+name: Meu Workflow Programado e Push
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 * * * *'  # Executa a cada hora cheia
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Usando uma Action pronta (Exemplo: setup Node.js)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Script personalizado
+        run: |
+          echo "Executando script customizado..."
+          date
+          echo "Fim do script"
