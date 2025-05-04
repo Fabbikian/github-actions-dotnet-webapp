@@ -1,4 +1,4 @@
-name: Meu Workflow Programado e Push
+name: .NET Build
 
 on:
   push:
@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Usando uma Action pronta (Exemplo: setup Node.js)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
 
@@ -25,6 +25,3 @@ jobs:
           echo "Executando script customizado..."
           date
           echo "Fim do script"
-git add .
-git commit -m "Alteração simples para testar execução do workflow"
-git push origin main
