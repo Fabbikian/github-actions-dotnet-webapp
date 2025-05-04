@@ -25,3 +25,4 @@ jobs:
           echo "Executando script customizado..."
           date
           echo "Fim do script"
+# Linha adicionada para teste
